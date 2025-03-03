@@ -48,7 +48,7 @@ import { onMounted, ref, computed, watch } from "vue";
 import { useProductStore } from "~/pages/product/stores/productStore";
 import ProductTable from "./components/ProductTable.vue";
 import Pagination from "./components/Pagination.vue";
-import { useDebounceFn } from "@vueuse/core"; // Import debounce function
+import { useDebounceFn } from "@vueuse/core"; 
 
 const productStore = useProductStore();
 const loading = ref(true);
@@ -77,15 +77,14 @@ const handlePageChange = (newPage) => {
   fetchProducts();
 };
 
-// Debounced search function
 const debouncedSearch = useDebounceFn(() => {
-  currentPage.value = 1; // Reset to first page on search
+  currentPage.value = 1; 
   savePageToStorage(1);
   fetchProducts();
-}, 300); // 300ms delay
+}, 300); 
 
-watch(currentPage, fetchProducts); // Fetch when page changes
-watch(searchQuery, debouncedSearch); // Debounced search
+watch(currentPage, fetchProducts); 
+watch(searchQuery, debouncedSearch); 
 
 onMounted(() => {
   currentPage.value = getStoredPage();

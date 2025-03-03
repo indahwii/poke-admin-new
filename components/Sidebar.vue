@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-import { ChevronDownIcon } from '@heroicons/vue/24/solid' // Import Heroicons
+import { ChevronDownIcon } from '@heroicons/vue/24/solid' 
 
 const isOpen = ref(false)
-const isMasterOpen = ref(false) // Controls sub-menu toggle
+const isMasterOpen = ref(false)
 
 const toggleSidebar = () => {
   isOpen.value = !isOpen.value
@@ -48,7 +48,6 @@ const toggleMasterMenu = () => {
     </ul>
   </aside>
 
-  <!-- Sidebar Toggle Button (for mobile) -->
   <button
     @click="toggleSidebar"
     class="fixed top-4 left-4 md:hidden bg-gray-900 text-white p-2 rounded"
