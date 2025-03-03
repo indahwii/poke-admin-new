@@ -3,13 +3,13 @@
     <thead>
       <tr>
         <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-          Number
+          {{ $t("products.number") }}
         </th>
         <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-          Name
+          {{ $t("products.name") }}
         </th>
         <th scope="col" class="py-3.5 pl-3 pr-4 text-center text-sm font-semibold text-gray-900">
-          Actions
+          {{ $t("products.action") }}
         </th>
       </tr>
     </thead>
@@ -47,6 +47,9 @@
 import { computed } from "vue";
 import { EyeIcon, PencilIcon, TrashIcon } from "@heroicons/vue/24/solid";
 import { useProductStore } from "~/pages/product/stores/productStore";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const productStore = useProductStore(); 
 

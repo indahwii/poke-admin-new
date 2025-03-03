@@ -19,13 +19,12 @@ const toggleMasterMenu = () => {
     :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     class="fixed md:relative inset-y-0 left-0 w-64 bg-gray-900 text-white transition-transform transform md:translate-x-0 p-4 h-screen flex flex-col"
   >
-    <h2 class="text-lg font-bold mb-4">Menu</h2>
+    <img src="https://static.vecteezy.com/system/resources/previews/027/127/571/non_2x/pokemon-logo-pokemon-icon-transparent-free-png.png" class="w-20 h-auto mb-3 item-center">
     <ul class="flex-1 space-y-2">
       <li>
         <NuxtLink to="/" class="block p-2 hover:bg-gray-700 rounded">Home</NuxtLink>
       </li>
 
-      <!-- Master Data Menu -->
       <li>
         <button
           @click="toggleMasterMenu"

@@ -10,4 +10,12 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@pinia/nuxt'],
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/us.png', iso: 'en-US' },
+      { code: 'id', name: 'Bahasa Indonesia', flag: 'https://flagcdn.com/w40/id.png', iso: 'id-ID' }
+    ],
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
+  }
 })
